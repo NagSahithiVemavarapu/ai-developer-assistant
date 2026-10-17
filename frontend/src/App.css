@@ -121,3 +121,164 @@ button:hover {
   box-sizing: border-box;
   margin-bottom: 12px;
 }
+
+
+.code-container {
+  margin: 1rem 0;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.code-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #d1d5db;
+  background: #eef2f7;
+}
+
+.code-language {
+  font-size: 0.8rem;
+  color: #475569;
+  text-transform: uppercase;
+}
+
+.copy-code-button {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: white;
+  color: #1e293b;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.copy-code-button:hover {
+  background: #e2e8f0;
+}
+
+.code-container pre,
+pre.code-block {
+  margin: 0;
+  padding: 14px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.code-container code {
+  display: block;
+  padding: 14px;
+  overflow-x: auto;
+  white-space: pre;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.9rem;
+}
+
+.code-container pre code {
+  padding: 0;
+}
+
+.copy-error {
+  color: #b91c1c;
+  margin-top: 8px;
+}
+
+
+
+.history-section {
+  margin-bottom: 24px;
+}
+
+.history-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.history-heading h2,
+.history-heading h3 {
+  margin-top: 0;
+}
+
+.history-empty {
+  padding: 12px;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.history-item-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.history-date {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.history-preview {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.view-history-button,
+.clear-history-button {
+  padding: 7px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.view-history-button:hover,
+.clear-history-button:hover {
+  background: #f1f5f9;
+}
+
+.history-detail {
+  margin-top: 20px;
+}
+
+.history-input {
+  padding: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .history-item {
+    align-items: flex-start;
+  }
+
+  .history-heading {
+    align-items: flex-start;
+  }
+}
