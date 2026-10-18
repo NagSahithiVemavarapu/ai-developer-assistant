@@ -119,6 +119,25 @@ function App() {
     }
   }
 
+  // Delete one saved conversation
+  function handleDeleteHistory(id: string) {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this conversation?"
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    setHistory((previous) =>
+      previous.filter((item) => item.id !== id)
+    );
+
+    setSelectedHistory((current) =>
+      current?.id === id ? null : current
+    );
+  }
+
   // Copy code to clipboard
   async function handleCopyCode(
     codeText: string,
@@ -409,14 +428,22 @@ function App() {
                     {item.input.length > 100 ? "..." : ""}
                   </p>
                 </div>
-
-                <button
-                  type="button"
-                  className="view-history-button"
-                  onClick={() => setSelectedHistory(item)}
-                >
-                  View
-                </button>
+                <div className="history-actions">
+                    <button
+                      type="button"
+                      className="view-history-button"
+                      onClick={() => setSelectedHistory(item)}
+                    >
+                    View
+                    </button>
+                    <button
+                    type="button"
+                    className="delete-history-button"
+                    onClick={() => handleDeleteHistory(item.id)}
+                    >
+                    Delete
+                    </button>
+                </div>
               </li>
             ))}
           </ul>
